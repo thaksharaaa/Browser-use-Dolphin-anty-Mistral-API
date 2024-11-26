@@ -1,0 +1,50 @@
+[project]
+name = "browser-use"
+description = "Make websites accessible for AI agents"
+authors = [
+    { name = "Gregor Zunic" }
+]
+version = "0.1.8"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "MainContentExtractor>=0.0.4",
+    "beautifulsoup4>=4.12.3",
+    "langchain>=0.3.7",
+    "langchain-openai>=0.2.5",
+    "langchain-anthropic>=0.2.4",
+    "langchain-fireworks>=0.2.5",
+    "langchain-mistralai>=0.0.3",
+    "pydantic>=2.9.2",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "webdriver-manager>=4.0.2",
+    "posthog>=3.7.0",
+    "playwright>=1.48.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "tokencost>=0.1.16",
+    "hatch>=1.13.0",
+    "build>=1.2.2",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0"
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
